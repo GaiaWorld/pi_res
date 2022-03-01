@@ -6,8 +6,8 @@
 
 use std::any::TypeId;
 
-use hash::XHashMap;
-use share::Share;
+use pi_hash::XHashMap;
+use pi_share::Share;
 
 use super::res_map::{Res, ResCollect, ResMap, StateInfo};
 
@@ -231,9 +231,9 @@ fn get_mut<T: Res>(map: &ResMap<T>) -> &mut ResMap<T> {
 }
 
 #[cfg(test)]
-extern crate atom;
+extern crate pi_atom;
 #[cfg(test)]
-use self::atom::Atom;
+use pi_atom::Atom;
 #[cfg(test)]
 struct R1 {}
 

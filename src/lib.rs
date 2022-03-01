@@ -1,12 +1,12 @@
 
-extern crate deque;
-extern crate hash;
-extern crate lru;
+extern crate pi_deque;
+extern crate pi_hash;
+extern crate pi_lru;
 
-extern crate slab;
+extern crate pi_slab;
 #[macro_use]
-extern crate any;
-extern crate share;
+extern crate pi_any;
+extern crate pi_share;
 extern crate log;
 
 

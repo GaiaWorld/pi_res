@@ -8,12 +8,12 @@ use std::ops::Deref;
 #[cfg(feature="rc")]
 use any::RcAny;
 #[cfg(not(feature="rc"))]
-use any::ArcAny;
-use deque::deque::Node;
-use hash::XHashMap;
-use lru::{Entry, LruCache};
-use share::{Share, ShareWeak};
-use slab::Slab;
+use pi_any::ArcAny;
+use pi_deque::deque::Node;
+use pi_hash::XHashMap;
+use pi_lru::{Entry, LruCache};
+use pi_share::{Share, ShareWeak};
+use pi_slab::Slab;
 
 /// 资源，放入资源表的资源必须实现该trait
 #[cfg(feature="rc")]

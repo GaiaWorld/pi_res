@@ -2,31 +2,23 @@
 name = "pi_res"
 version = "0.1.0"
 authors = ["zmythleo <zmythleo@gmail.com>"]
+edition = "2021"
+description = "Resource Manager"
+repository = "https://github.com/GaiaWorld/pi_res.git"
+license = "MIT OR Apache-2.0"
+keywords = ["pi", "res_mgr", "pi_res"]
 
 [dependencies]
-pi_slab = { path = "../pi_slab"}
-pi_deque = {path = "../pi_deque"}
-pi_lru = {path = "../pi_lru"}
-pi_any = {path="../pi_any"}
-# share_rc = { package = "share", path = "../share", features=["rc"], optional = true }
-# share_arc = { package = "share", path = "../share", optional = true }
-pi_share = { path = "../pi_share", optional = true}
-log="*"
+pi_slab = "0.1"
+pi_deque = "0.1"
+pi_lru = "0.1"
+pi_any = "0.1"
+pi_share = { version = "0.1", optional = true}
+log="0.4"
 
-pi_hash = {path="../pi_hash"}
-pi_atom = {path="../pi_atom"}
+pi_hash = "0.1"
+pi_atom = "0.1"
 
 [features]
-default = ["share"]
-rc = ["share/rc"]
-
-
-
-# [dependencies.web-sys]
-# version = "*"
-# features = [
-# 	"console",
-# ]
-# [features]
-# default = []
-# rc = ["share/rc"]
+default = ["pi_share"]
+rc = ["pi_share/rc"]
